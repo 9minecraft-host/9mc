@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9 Minecraft - فروشگاه</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--g:#5BBF3A;--gd:#3d8a27;--gg:rgba(91,191,58,0.2);--gold:#F5C842;--dia:#42D4F4;--pur:#c084fc;--red:#e74c3c;--bg:#0d0d0d;--card:#141414;--c2:#1a1a1a;--bor:#2a2a2a;--tx:#e8e8e8;--mu:#777;--mu2:#555;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Vazirmatn',sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;direction:rtl;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(91,191,58,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(91,191,58,.025) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;z-index:0;}
+/* HEADER */
+header{position:relative;z-index:100;background:rgba(10,10,10,.97);border-bottom:2px solid var(--g);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:66px;box-shadow:0 2px 30px var(--gg);}
+.logo{display:flex;align-items:center;gap:10px;cursor:pointer;}
+.logo-icon{width:36px;height:36px;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);border:2px solid var(--gd);image-rendering:pixelated;}
+.logo-icon span{display:block;}
+.logo-icon span:nth-child(1){background:#6acf45;}.logo-icon span:nth-child(2){background:#5BBF3A;}.logo-icon span:nth-child(3){background:#4faa30;}.logo-icon span:nth-child(4){background:#6acf45;}
+.logo-icon span:nth-child(5){background:#3d8a27;}.logo-icon span:nth-child(6){background:#8B6440;}.logo-icon span:nth-child(7){background:#7a5836;}.logo-icon span:nth-child(8){background:#3d8a27;}
+.logo-icon span:nth-child(9){background:#8B6440;}.logo-icon span:nth-child(10){background:#7a5836;}.logo-icon span:nth-child(11){background:#8B6440;}.logo-icon span:nth-child(12){background:#7a5836;}
+.logo-icon span:nth-child(13){background:#7a5836;}.logo-icon span:nth-child(14){background:#8B6440;}.logo-icon span:nth-child(15){background:#6a4828;}.logo-icon span:nth-child(16){background:#7a5836;}
+.logo-text{font-size:1.35rem;font-weight:900;}.logo-text em{font-style:normal;color:var(--g);}
+nav{display:flex;gap:1.3rem;align-items:center;}
+nav a{color:var(--mu);text-decoration:none;font-size:.84rem;font-weight:500;cursor:pointer;transition:color .2s;}
+nav a:hover,nav a.active{color:var(--g);}
+.hdr{display:flex;align-items:center;gap:7px;}
+.btn{border:none;padding:7px 15px;font-family:'Vazirmatn',sans-serif;font-weight:700;font-size:.79rem;cursor:pointer;transition:all .2s;}
+.btn-g{background:var(--g);color:#fff;clip-path:polygon(0 0,calc(100% - 4px) 0,100% 4px,100% 100%,4px 100%,0 calc(100% - 4px));}
+.btn-g:hover{background:var(--gd);}
+.btn-o{background:transparent;color:var(--tx);border:1px solid var(--bor);}
+.btn-o:hover{border-color:var(--g);color:var(--g);}
+.btn-r{background:transparent;color:var(--red);border:1px solid rgba(231,76,60,.4);}
+.btn-r:hover{border-color:var(--red);}
+.btn-gold{background:var(--gold);color:#1a1a1a;clip-path:polygon(0 0,calc(100% - 4px) 0,100% 4px,100% 100%,4px 100%,0 calc(100% - 4px));}
+.uchip{display:flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--bor);padding:4px 11px 4px 4px;cursor:pointer;transition:border-color .2s;}
+.uchip:hover{border-color:var(--g);}
+.uav{width:28px;height:28px;background:var(--g);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.77rem;color:#fff;}
+/* PAGES */
+.page{display:none;position:relative;z-index:5;}.page.active{display:block;}
+/* HERO */
+.hero{text-align:center;padding:4.5rem 2rem 3.5rem;}
+.hbadge{display:inline-block;background:rgba(91,191,58,.1);border:1px solid var(--g);color:var(--g);font-size:.68rem;font-weight:700;padding:4px 14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.3rem;}
+.hero h1{font-size:clamp(1.9rem,5vw,3.6rem);font-weight:900;line-height:1.05;margin-bottom:.8rem;}
+.hero h1 em{font-style:normal;color:var(--g);}
+.hero p{color:var(--mu);font-size:.93rem;max-width:450px;margin:0 auto 1.8rem;line-height:1.7;}
+.hip{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--bor);padding:9px 18px;font-size:.93rem;font-weight:700;color:var(--g);}
+.hip span{color:var(--mu);font-size:.74rem;font-weight:400;}
+.hbtns{display:flex;gap:10px;justify-content:center;margin-top:1.5rem;flex-wrap:wrap;}
+.sbar{display:flex;justify-content:center;border-top:1px solid var(--bor);border-bottom:1px solid var(--bor);background:rgba(18,18,18,.9);margin-bottom:2.5rem;}
+.sv{flex:1;max-width:185px;text-align:center;padding:1.1rem .8rem;border-left:1px solid var(--bor);}
+.sv:last-child{border-right:1px solid var(--bor);}
+.svv{font-size:1.35rem;font-weight:900;color:var(--g);display:block;line-height:1;margin-bottom:3px;}
+.svl{font-size:.68rem;color:var(--mu);text-transform:uppercase;letter-spacing:1px;}
+/* SHOP */
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem 4rem;}
+.notice{background:rgba(91,191,58,.06);border:1px solid rgba(91,191,58,.18);border-right:3px solid var(--g);padding:.9rem 1.1rem;margin-bottom:1.8rem;font-size:.79rem;color:var(--mu);display:flex;align-items:flex-start;gap:10px;line-height:1.7;}
+.tabs{display:flex;gap:3px;margin-bottom:1.7rem;background:var(--card);border:1px solid var(--bor);padding:3px;width:fit-content;flex-wrap:wrap;}
+.tab{padding:7px 15px;border:none;background:transparent;color:var(--mu);font-family:'Vazirmatn',sans-serif;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .15s;}
+.tab.active{background:var(--g);color:#fff;}
+.tab:hover:not(.active){color:var(--tx);}
+.tp{display:none;}.tp.active{display:block;}
+.stl{font-size:1.15rem;font-weight:900;margin-bottom:1.2rem;display:flex;align-items:center;gap:10px;}
+.stl::after{content:'';flex:1;height:1px;background:var(--bor);}
+.dot{width:8px;height:8px;background:var(--g);flex-shrink:0;}
+/* RANKS */
+.ranks{display:grid;grid-template-columns:repeat(auto-fill,minmax(182px,1fr));gap:10px;margin-bottom:2.5rem;}
+.rc{border:1px solid var(--bor);background:var(--card);padding:1.2rem .9rem;text-align:center;position:relative;transition:border-color .2s,transform .15s;cursor:pointer;}
+.rc:hover{transform:translateY(-3px);}
+.rc.pop{border-color:var(--gold);}
+.rc.pop::before{content:'محبوب‌ترین';position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#1a1a1a;font-size:.59rem;font-weight:700;padding:2px 9px;white-space:nowrap;}
+.rn{font-size:.98rem;font-weight:900;margin-bottom:3px;}
+.r1 .rn{color:#999;}.r2 .rn{color:var(--g);}.r3 .rn{color:var(--gold);}.r4 .rn{color:var(--dia);}.r5 .rn{color:var(--pur);}
+.rp{list-style:none;margin:.7rem 0;text-align:right;}
+.rp li{font-size:.71rem;color:var(--mu);padding:2px 0;display:flex;align-items:center;gap:5px;}
+.rp li::before{content:'▸';color:var(--g);flex-shrink:0;}
+.rprice{font-size:1.02rem;font-weight:900;color:var(--g);margin-top:.7rem;display:block;}
+.rbuy{margin-top:9px;width:100%;background:transparent;border:1px solid var(--bor);color:var(--tx);padding:7px;font-family:'Vazirmatn',sans-serif;font-size:.75rem;font-weight:600;cursor:pointer;transition:all .2s;}
+.rbuy:hover{background:var(--g);border-color:var(--g);color:#fff;}
+.rc.pop .rbuy{background:var(--gold);border-color:var(--gold);color:#1a1a1a;}
+/* PRODUCTS */
+.prods{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;background:var(--bor);border:1px solid var(--bor);}
+.pc{background:var(--card);padding:1.2rem;position:relative;transition:background .2s;cursor:pointer;display:flex;flex-direction:column;}
+.pc:hover{background:var(--c2);}.pc:hover .bbt{opacity:1;transform:translateY(0);}
+.badge{position:absolute;top:9px;left:9px;font-size:.57rem;font-weight:700;padding:2px 7px;letter-spacing:1px;text-transform:uppercase;}
+.bh{background:#c0392b;color:#fff;}.bn{background:var(--g);color:#fff;}.bs{background:var(--gold);color:#1a1a1a;}.bl{background:var(--dia);color:#0a3d4a;}
+.picon{width:50px;height:50px;margin:0 auto .7rem;display:flex;align-items:center;justify-content:center;font-size:2.3rem;line-height:1;}
+.pname{font-size:.88rem;font-weight:700;text-align:center;margin-bottom:4px;}
+.pdesc{font-size:.73rem;color:var(--mu);text-align:center;line-height:1.6;margin-bottom:.7rem;flex:1;}
+.pprice{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:.7rem;border-top:1px solid var(--bor);}
+.pval{font-size:.95rem;font-weight:900;color:var(--g);}
+.cur{font-size:.6rem;font-weight:400;color:var(--mu);margin-right:2px;}
+.pold{font-size:.67rem;color:var(--mu);text-decoration:line-through;display:block;}
+.bbt{background:var(--g);color:#fff;border:none;padding:6px 11px;font-family:'Vazirmatn',sans-serif;font-size:.72rem;font-weight:700;cursor:pointer;opacity:.7;transform:translateY(3px);transition:all .2s;clip-path:polygon(0 0,calc(100% - 4px) 0,100% 4px,100% 100%,4px 100%,0 calc(100% - 4px));}
+.bbt:hover{background:var(--gd);}
+/* MODALS */
+.ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;padding:1rem;}
+.ov.open{display:flex;}
+.modal{background:#111;border:1px solid var(--bor);border-top:2px solid var(--g);width:100%;max-width:420px;padding:1.9rem;position:relative;max-height:90vh;overflow-y:auto;}
+.mcls{position:absolute;top:11px;left:11px;background:none;border:none;color:var(--mu);font-size:1.25rem;cursor:pointer;line-height:1;}
+.mcls:hover{color:var(--tx);}
+.modal h2{font-size:1.2rem;font-weight:900;margin-bottom:.3rem;}
+.modal h2 em{font-style:normal;color:var(--g);}
+.sub{font-size:.76rem;color:var(--mu);margin-bottom:1.3rem;}
+.f{margin-bottom:.9rem;}
+.f label{display:block;font-size:.71rem;color:var(--mu);margin-bottom:4px;font-weight:500;}
+.f input,.f select,.f textarea{width:100%;background:#0a0a0a;border:1px solid var(--bor);color:var(--tx);padding:8px 11px;font-family:'Vazirmatn',sans-serif;font-size:.84rem;outline:none;transition:border-color .2s;}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--g);}
+.f textarea{resize:vertical;min-height:80px;}
+.fr{display:flex;gap:9px;}.fr .f{flex:1;}
+.aerr{background:rgba(231,76,60,.1);border:1px solid rgba(231,76,60,.3);color:var(--red);padding:6px 10px;font-size:.74rem;margin-bottom:.7rem;display:none;}
+.aerr.show{display:block;}
+.asw{font-size:.74rem;color:var(--mu);margin-top:.7rem;text-align:center;}
+.asw a{color:var(--g);cursor:pointer;}
+/* PAY MODAL */
+.paycard{background:#0a0a0a;border:1px solid var(--bor);padding:1.1rem;margin:.8rem 0;text-align:center;}
+.pcnum{font-size:1.25rem;font-weight:900;color:var(--gold);letter-spacing:4px;font-family:monospace;}
+.pcname{font-size:.74rem;color:var(--mu);margin-top:4px;}
+.pamount{font-size:1.35rem;font-weight:900;color:var(--g);text-align:center;margin:.7rem 0;}
+.psteps{font-size:.76rem;color:var(--mu);line-height:2.2;padding-right:1.1rem;}
+.psteps li{list-style:decimal;}
+/* STAFF SECTION */
+.staff-hero{background:linear-gradient(135deg,rgba(91,191,58,.08) 0%,rgba(192,132,252,.06) 100%);border:1px solid rgba(91,191,58,.15);padding:3rem 2rem;text-align:center;margin-bottom:2rem;}
+.staff-hero h2{font-size:2rem;font-weight:900;margin-bottom:.8rem;}
+.staff-hero h2 em{font-style:normal;color:var(--g);}
+.staff-hero p{color:var(--mu);line-height:1.8;max-width:550px;margin:0 auto 2rem;}
+.staff-positions{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:2rem;}
+.pos-card{background:var(--card);border:1px solid var(--bor);padding:1.4rem;transition:border-color .2s;}
+.pos-card:hover{border-color:var(--g);}
+.pos-icon{font-size:2rem;margin-bottom:.8rem;}
+.pos-name{font-size:1rem;font-weight:700;margin-bottom:.4rem;}
+.pos-desc{font-size:.76rem;color:var(--mu);line-height:1.7;}
+.staff-reqs{background:var(--card);border:1px solid var(--bor);padding:1.5rem;margin-bottom:2rem;}
+.staff-reqs h3{font-size:1rem;font-weight:700;margin-bottom:1rem;color:var(--g);}
+.req-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;}
+.req-list li{font-size:.78rem;color:var(--mu);display:flex;align-items:center;gap:7px;line-height:1.5;}
+.req-list li::before{content:'✓';color:var(--g);font-weight:700;flex-shrink:0;}
+.staff-apply-btn{display:inline-flex;align-items:center;gap:10px;background:var(--g);color:#fff;font-family:'Vazirmatn',sans-serif;font-weight:700;font-size:1rem;padding:14px 36px;text-decoration:none;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,6px 100%,0 calc(100% - 6px));transition:background .2s,transform .15s;}
+.staff-apply-btn:hover{background:var(--gd);transform:scale(1.03);}
+/* DASHBOARD */
+.dw{max-width:1100px;margin:0 auto;padding:1.8rem 1.5rem 4rem;}
+.dhdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.8rem;flex-wrap:wrap;gap:.8rem;}
+.dhdr h1{font-size:1.35rem;font-weight:900;}
+.dhdr h1 em{font-style:normal;color:var(--g);}
+.dgrid{display:grid;grid-template-columns:225px 1fr;gap:15px;align-items:start;}
+.dsb{display:flex;flex-direction:column;gap:3px;}
+.dni{display:flex;align-items:center;gap:9px;padding:8px 12px;background:var(--card);border:1px solid transparent;font-size:.8rem;font-weight:500;cursor:pointer;transition:all .15s;color:var(--mu);}
+.dni:hover{border-color:var(--bor);color:var(--tx);}
+.dni.active{border-color:var(--g);color:var(--g);background:rgba(91,191,58,.07);}
+.dp{display:none;}.dp.active{display:block;}
+.scards{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:9px;margin-bottom:1.4rem;}
+.sc{background:var(--card);border:1px solid var(--bor);padding:.9rem;}
+.scl{font-size:.66rem;color:var(--mu);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+.scv{font-size:1.4rem;font-weight:900;color:var(--g);}
+.cb{background:var(--card);border:1px solid var(--bor);padding:1.2rem;margin-bottom:11px;}
+.cb h3{font-size:.9rem;font-weight:700;margin-bottom:.8rem;padding-bottom:.6rem;border-bottom:1px solid var(--bor);}
+.ot{width:100%;border-collapse:collapse;font-size:.76rem;}
+.ot th{text-align:right;padding:6px 9px;color:var(--mu);font-weight:600;border-bottom:1px solid var(--bor);font-size:.66rem;text-transform:uppercase;letter-spacing:.5px;}
+.ot td{padding:7px 9px;border-bottom:1px solid #1e1e1e;color:var(--tx);}
+.ot tr:last-child td{border-bottom:none;}
+.os{font-size:.66rem;padding:2px 6px;font-weight:600;}
+.os.done{background:rgba(91,191,58,.1);color:var(--g);}
+.os.pend{background:rgba(245,200,66,.1);color:var(--gold);}
+.os.rej{background:rgba(231,76,60,.1);color:var(--red);}
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:.7rem;}
+.ff{display:flex;flex-direction:column;gap:4px;}
+.ff label{font-size:.7rem;color:var(--mu);font-weight:500;}
+.ff input,.ff select{background:#0a0a0a;border:1px solid var(--bor);color:var(--tx);padding:7px 10px;font-family:'Vazirmatn',sans-serif;font-size:.82rem;outline:none;transition:border-color .2s;}
+.ff input:focus,.ff select:focus{border-color:var(--g);}
+.nb{display:none;background:rgba(91,191,58,.1);border:1px solid rgba(91,191,58,.3);color:var(--g);padding:7px 12px;margin-bottom:.7rem;font-size:.76rem;}
+.nb.show{display:block;}
+/* TICKETS */
+.tlist{display:flex;flex-direction:column;gap:7px;}
+.ti{background:var(--card);border:1px solid var(--bor);padding:.85rem;cursor:pointer;transition:border-color .2s;}
+.ti:hover{border-color:var(--g);}
+.tih{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;}
+.tit{font-size:.83rem;font-weight:700;}
+.tim{font-size:.68rem;color:var(--mu);}
+.tprev{font-size:.74rem;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ts{font-size:.64rem;padding:2px 6px;font-weight:700;}
+.ts.open{background:rgba(91,191,58,.1);color:var(--g);border:1px solid rgba(91,191,58,.3);}
+.ts.pend{background:rgba(245,200,66,.1);color:var(--gold);border:1px solid rgba(245,200,66,.3);}
+.ts.closed{background:rgba(255,255,255,.05);color:var(--mu);border:1px solid var(--bor);}
+.tchat{display:flex;flex-direction:column;gap:8px;margin-top:.8rem;max-height:270px;overflow-y:auto;}
+.msg{padding:8px 11px;max-width:82%;font-size:.79rem;line-height:1.6;}
+.msg.user{background:rgba(91,191,58,.1);border:1px solid rgba(91,191,58,.2);align-self:flex-end;text-align:right;}
+.msg.admin{background:var(--c2);border:1px solid var(--bor);align-self:flex-start;}
+.mname{font-size:.64rem;color:var(--mu);margin-bottom:2px;font-weight:600;}
+.treply{display:flex;gap:7px;margin-top:.8rem;}
+.treply input{flex:1;background:#0a0a0a;border:1px solid var(--bor);color:var(--tx);padding:7px 10px;font-family:'Vazirmatn',sans-serif;font-size:.8rem;outline:none;}
+.treply input:focus{border-color:var(--g);}
+/* MC */
+.mcav{width:58px;height:58px;background:var(--c2);border:2px solid var(--bor);display:flex;align-items:center;justify-content:center;font-size:1.6rem;}
+.mclink{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.mclf{display:flex;gap:8px;margin-top:.7rem;flex-wrap:wrap;}
+.mclf input{flex:1;min-width:140px;background:#0a0a0a;border:1px solid var(--bor);color:var(--tx);padding:7px 10px;font-family:'Vazirmatn',sans-serif;font-size:.82rem;outline:none;}
+.mclf input:focus{border-color:var(--g);}
+.mcs{font-size:.7rem;padding:2px 9px;display:inline-block;font-weight:600;}
+.mcs.on{background:rgba(91,191,58,.12);color:var(--g);border:1px solid rgba(91,191,58,.3);}
+.mcs.off{background:rgba(231,76,60,.1);color:var(--red);border:1px solid rgba(231,76,60,.2);}
+/* ADMIN */
+.aw{max-width:1200px;margin:0 auto;padding:1.8rem 1.5rem 4rem;}
+.atop{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.8rem;flex-wrap:wrap;gap:.8rem;}
+.atop h1{font-size:1.3rem;font-weight:900;}
+.atop h1 em{font-style:normal;color:var(--red);}
+.abadge{background:rgba(231,76,60,.1);border:1px solid rgba(231,76,60,.3);color:var(--red);font-size:.67rem;font-weight:700;padding:3px 9px;letter-spacing:1px;}
+.agrid{display:grid;grid-template-columns:200px 1fr;gap:15px;align-items:start;}
+.ani{display:flex;align-items:center;gap:8px;padding:8px 11px;background:var(--card);border:1px solid transparent;font-size:.79rem;font-weight:500;cursor:pointer;transition:all .15s;color:var(--mu);margin-bottom:3px;}
+.ani:hover{border-color:var(--bor);color:var(--tx);}
+.ani.active{border-color:var(--red);color:var(--red);background:rgba(231,76,60,.06);}
+.ap{display:none;}.ap.active{display:block;}
+.ascards{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:9px;margin-bottom:1.4rem;}
+.asc{background:var(--card);border:1px solid var(--bor);padding:.9rem;}
+.ascl{font-size:.65rem;color:var(--mu);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
+.ascv{font-size:1.4rem;font-weight:900;}
+.ag{color:var(--g);}.ago{color:var(--gold);}.ab{color:var(--dia);}.ar{color:var(--red);}
+.at{width:100%;border-collapse:collapse;font-size:.75rem;}
+.at th{text-align:right;padding:6px 9px;color:var(--mu);font-weight:600;border-bottom:1px solid var(--bor);font-size:.64rem;text-transform:uppercase;letter-spacing:.5px;}
+.at td{padding:7px 9px;border-bottom:1px solid #1a1a1a;color:var(--tx);}
+.at tr:hover td{background:rgba(255,255,255,.02);}
+.at tr:last-child td{border-bottom:none;}
+.ab2{background:none;border:1px solid var(--bor);color:var(--mu);font-family:'Vazirmatn',sans-serif;font-size:.67rem;padding:2px 7px;cursor:pointer;transition:all .15s;margin-left:2px;}
+.ab2:hover{border-color:var(--g);color:var(--g);}
+.ab2.d:hover{border-color:var(--red);color:var(--red);}
+.ab2.gold:hover{border-color:var(--gold);color:var(--gold);}
+.isrch{background:#0a0a0a;border:1px solid var(--bor);color:var(--tx);padding:6px 11px;font-family:'Vazirmatn',sans-serif;font-size:.79rem;outline:none;width:185px;}
+.isrch:focus{border-color:var(--g);}
+.tbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem;flex-wrap:wrap;gap:7px;}
+.chart{display:flex;align-items:flex-end;gap:5px;height:100px;margin-top:.7rem;}
+.cc{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;}
+.cb2{width:100%;background:var(--g);opacity:.65;transition:opacity .2s;min-height:4px;}
+.cc:hover .cb2{opacity:1;}
+.cc span{font-size:.6rem;color:var(--mu);}
+.odot{width:7px;height:7px;background:var(--g);display:inline-block;margin-left:5px;animation:blink 1.5s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+.tg{font-size:.66rem;padding:2px 6px;font-weight:600;}
+.tg.g{background:rgba(91,191,58,.12);color:var(--g);}
+.tg.r{background:rgba(231,76,60,.1);color:var(--red);}
+.tg.o{background:rgba(245,200,66,.1);color:var(--gold);}
+.tg.b{background:rgba(66,212,244,.1);color:var(--dia);}
+.cdisp{background:#0a0a0a;border:1px solid var(--bor);padding:1.2rem;margin-bottom:.9rem;text-align:center;}
+.cnum{font-size:1.3rem;font-weight:900;color:var(--gold);letter-spacing:4px;font-family:monospace;}
+.cown{font-size:.73rem;color:var(--mu);margin-top:5px;}
+.psbadge{display:inline-flex;align-items:center;font-size:.74rem;font-weight:600;padding:3px 10px;}
+.pson{background:rgba(91,191,58,.12);color:var(--g);border:1px solid rgba(91,191,58,.3);}
+.psoff{background:rgba(231,76,60,.1);color:var(--red);border:1px solid rgba(231,76,60,.3);}
+.pagrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:9px;}
+.pac{background:var(--card);border:1px solid var(--bor);padding:.9rem;}
+.pac h4{font-size:.81rem;font-weight:700;margin-bottom:3px;}
+.pac p{font-size:.7rem;color:var(--mu);margin-bottom:5px;}
+.pac .price{font-size:.88rem;font-weight:900;color:var(--g);margin-bottom:7px;}
+/* LOADING */
+.loader{display:inline-block;width:16px;height:16px;border:2px solid rgba(91,191,58,.3);border-top-color:var(--g);border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-left:6px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.empty-msg{text-align:center;color:var(--mu);padding:2rem;font-size:.82rem;}
+footer{position:relative;z-index:5;border-top:1px solid var(--bor);text-align:center;padding:1.5rem;font-size:.73rem;color:var(--mu);}
+footer strong{color:var(--g);}
+@media(max-width:680px){nav{display:none;}.dgrid,.agrid{grid-template-columns:1fr;}.pr{grid-template-columns:1fr;}.fr{flex-direction:column;}.req-list{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo" onclick="goPage('shop')">
+    <div class="logo-icon"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="logo-text"><em>9</em> Minecraft</div>
+  </div>
+  <nav>
+    <a onclick="goPage('shop')" id="nv-shop" class="active">فروشگاه</a>
+    <a onclick="goPage('dash')" id="nv-dash" style="display:none">داشبورد</a>
+    <a onclick="goPage('support')" id="nv-sup">پشتیبانی</a>
+    <a onclick="goPage('staff')" id="nv-staff">استاف شوید</a>
+  </nav>
+  <div class="hdr" id="hdr-g">
+    <button class="btn btn-o" onclick="openM('login')">ورود</button>
+    <button class="btn btn-g" onclick="openM('register')">ثبت‌نام</button>
+  </div>
+  <div class="hdr" id="hdr-u" style="display:none">
+    <div class="uchip" onclick="goPage('dash')">
+      <div class="uav" id="hdr-av">؟</div>
+      <span style="font-size:.79rem;font-weight:600" id="hdr-un"></span>
+    </div>
+    <button class="btn btn-r" id="admin-btn" style="display:none" onclick="goPage('admin')">⚡ ادمین</button>
+    <button class="btn btn-o" onclick="doLogout()">خروج</button>
+  </div>
+</header>
+
+<!-- AUTH MODALS -->
+<div class="ov" id="ov-auth" onclick="closeOv('ov-auth',event)">
+  <div class="modal" id="m-login">
+    <button class="mcls" onclick="closeAll()">✕</button>
+    <h2>ورود به <em>9MC</em></h2><p class="sub">با اکانت سایت وارد شوید</p>
+    <div class="aerr" id="lerr"></div>
+    <div class="f"><label>نام کاربری</label><input id="lu" placeholder="username" onkeydown="if(event.key==='Enter')doLogin()"></div>
+    <div class="f"><label>رمز عبور</label><input type="password" id="lp" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"></div>
+    <button class="btn btn-g" style="width:100%;padding:10px" id="login-btn" onclick="doLogin()">ورود</button>
+    <div class="asw">حساب ندارید؟ <a onclick="openM('register')">ثبت‌نام</a></div>
+  </div>
+  <div class="modal" id="m-reg" style="display:none">
+    <button class="mcls" onclick="closeAll()">✕</button>
+    <h2>ثبت‌نام در <em>9MC</em></h2><p class="sub">یک اکانت رایگان بسازید</p>
+    <div class="aerr" id="rerr"></div>
+    <div class="fr"><div class="f"><label>نام</label><input id="rfn" placeholder="علی"></div><div class="f"><label>نام خانوادگی</label><input id="rln" placeholder="محمدی"></div></div>
+    <div class="f"><label>نام کاربری</label><input id="ru" placeholder="فقط حرف انگلیسی، عدد، _"></div>
+    <div class="f"><label>ایمیل</label><input type="email" id="re" placeholder="you@example.com"></div>
+    <div class="f"><label>رمز عبور</label><input type="password" id="rp" placeholder="حداقل ۶ کاراکتر"></div>
+    <button class="btn btn-g" style="width:100%;padding:10px" id="reg-btn" onclick="doRegister()">ساخت اکانت</button>
+    <div class="asw">اکانت دارید؟ <a onclick="openM('login')">وارد شوید</a></div>
+  </div>
+</div>
+
+<!-- PAYMENT MODAL -->
+<div class="ov" id="ov-pay" onclick="closeOv('ov-pay',event)">
+  <div class="modal" style="border-top-color:var(--gold)">
+    <button class="mcls" onclick="closeAll()">✕</button>
+    <h2 style="color:var(--gold)">💳 پرداخت کارت به کارت</h2>
+    <p class="sub">مبلغ را به شماره کارت زیر واریز کنید</p>
+    <div class="paycard">
+      <div class="pcnum" id="pay-cnum">در حال بارگذاری...</div>
+      <div class="pcname" id="pay-cname"></div>
+      <div class="pcname" id="pay-cbk" style="font-size:.71rem;margin-top:2px"></div>
+    </div>
+    <div class="pamount">مبلغ: <span id="pay-amt">۰</span> تومان</div>
+    <ol class="psteps"><li>مبلغ را واریز کنید</li><li>کد پیگیری تراکنش را بگیرید</li><li>کد را در کادر زیر وارد کنید</li><li>دکمه تأیید را بزنید</li></ol>
+    <div class="f" style="margin-top:.9rem"><label>شماره پیگیری / کد مرجع</label><input id="pay-ref" placeholder="مثلاً: 987654321" dir="ltr" style="text-align:center"></div>
+    <div class="aerr" id="pay-err"></div>
+    <button class="btn btn-gold" style="width:100%;padding:10px" id="pay-btn" onclick="confirmPay()">✓ تأیید پرداخت و ثبت سفارش</button>
+    <div style="font-size:.71rem;color:var(--mu);margin-top:.7rem;text-align:center">پس از بررسی ادمین فعال می‌شود. معمولاً زیر ۳۰ دقیقه</div>
+  </div>
+</div>
+
+<!-- TICKET MODAL -->
+<div class="ov" id="ov-tkt" onclick="closeOv('ov-tkt',event)">
+  <div class="modal" style="border-top-color:var(--dia)">
+    <button class="mcls" onclick="closeAll()">✕</button>
+    <h2 style="color:var(--dia)">🎧 تیکت جدید</h2><p class="sub">مشکل یا سوال خود را شرح دهید</p>
+    <div class="aerr" id="tkt-err"></div>
+    <div class="f"><label>موضوع</label>
+      <select id="tkt-cat"><option value="">انتخاب...</option><option>مشکل پرداخت</option><option>عدم دریافت رنک</option><option>مشکل فنی</option><option>رفع بن</option><option>سوال عمومی</option><option>سایر</option></select>
+    </div>
+    <div class="f"><label>عنوان</label><input id="tkt-subj" placeholder="خلاصه مشکل"></div>
+    <div class="f"><label>توضیحات</label><textarea id="tkt-body" placeholder="جزئیات..."></textarea></div>
+    <button class="btn btn-g" style="width:100%;padding:10px" id="tkt-btn" onclick="submitTkt()">ارسال تیکت</button>
+  </div>
+</div>
+
+<!-- ═══ SHOP PAGE ═══ -->
+<div class="page active" id="page-shop">
+  <section class="hero">
+    <div class="hbadge">✦ فروشگاه رسمی سرور ✦</div>
+    <h1>خرید آیتم‌های <em>9 Minecraft</em></h1>
+    <p>رنک، کیت، کلید و آیتم‌های انحصاری برای تجربه‌ای بی‌نظیر</p>
+    <div class="hip"><span>آی‌پی سرور:</span>9mc.ir</div>
+    <div class="hbtns">
+      <button class="btn btn-g" onclick="copyIP()">کپی آی‌پی</button>
+      <button class="btn btn-o" onclick="openM('register')">ثبت‌نام رایگان</button>
+    </div>
+  </section>
+  <div class="sbar">
+    <div class="sv"><span class="svv">۱٬۲۴۸</span><span class="svl">آنلاین</span></div>
+    <div class="sv"><span class="svv">+۴۵K</span><span class="svl">کاربر کل</span></div>
+    <div class="sv"><span class="svv">۲۴/۷</span><span class="svl">آپتایم</span></div>
+    <div class="sv"><span class="svv">۹۹.۸٪</span><span class="svl">آپتایم ماهانه</span></div>
+  </div>
+  <div class="wrap">
+    <div class="notice">📢&nbsp; پس از تأیید پرداخت توسط ادمین، آیتم روی اکانت ماینکرفت شما اعمال می‌شود. یوزرنیم ماینکرفت خود را در داشبورد وارد کنید.</div>
+    <div class="tabs">
+      <button class="tab active" onclick="stab('ranks',this)">👑 رنک‌ها</button>
+      <button class="tab" onclick="stab('items',this)">🎒 آیتم و کیت</button>
+      <button class="tab" onclick="stab('keys',this)">🗝️ کریت</button>
+    </div>
+    <div class="tp active" id="tp-ranks">
+      <div class="stl"><div class="dot"></div>رنک‌های VIP</div>
+      <div class="ranks">
+        <div class="rc r1"><div class="rn">[VIP]</div><ul class="rp"><li>پوسته‌های رنگی</li><li>کیت هفتگی VIP</li><li>x2 تجربه</li><li>۱۰۰۰ سکه</li></ul><span class="rprice">۲۵٬۰۰۰ تومان</span><button class="rbuy" onclick="openPay('رنک VIP',25000)">خرید</button></div>
+        <div class="rc r2"><div class="rn">[VIP+]</div><ul class="rp"><li>همه مزایای VIP</li><li>کیت ویژه هفتگی</li><li>x3 تجربه</li><li>پرواز Lobby</li></ul><span class="rprice">۴۵٬۰۰۰ تومان</span><button class="rbuy" onclick="openPay('رنک VIP+',45000)">خرید</button></div>
+        <div class="rc r3 pop"><div class="rn">[MVP]</div><ul class="rp"><li>همه مزایای VIP+</li><li>کمیک‌ها</li><li>x4 تجربه</li><li>۳ هوم اضافه</li><li>رنگ نام چت</li></ul><span class="rprice">۸۰٬۰۰۰ تومان</span><button class="rbuy" onclick="openPay('رنک MVP',80000)">خرید</button></div>
+        <div class="rc r4"><div class="rn">[MVP+]</div><ul class="rp"><li>همه مزایای MVP</li><li>کیت MVP ماهانه</li><li>x5 تجربه</li><li>آیتم انحصاری</li><li>ذرات اختصاصی</li></ul><span class="rprice">۱۳۰٬۰۰۰ تومان</span><button class="rbuy" onclick="openPay('رنک MVP+',130000)">خرید</button></div>
+        <div class="rc r5"><div class="rn">[LEGEND]</div><ul class="rp"><li>همه مزایای MVP+</li><li>تابلوی افتخار</li><li>x10 تجربه</li><li>کیت LEGEND</li><li>دسترسی آلفا</li><li>عنوان انحصاری</li></ul><span class="rprice">۲۲۰٬۰۰۰ تومان</span><button class="rbuy" onclick="openPay('رنک LEGEND',220000)">خرید</button></div>
+      </div>
+    </div>
+    <div class="tp" id="tp-items">
+      <div class="stl"><div class="dot"></div>آیتم‌ها و کیت‌ها</div>
+      <div class="prods">
+        <div class="pc"><span class="badge bh">پرفروش</span><div class="picon">🎒</div><div class="pname">کیت استارتر</div><div class="pdesc">ابزار فول آیرون، غذا و مواد اولیه</div><div class="pprice"><div><span class="pval"><span class="cur">تومان</span>۱۲٬۰۰۰</span></div><button class="bbt" onclick="openPay('کیت استارتر',12000)">خرید</button></div></div>
+        <div class="pc"><span class="badge bn">جدید</span><div class="picon">⚔️</div><div class="pname">کیت نتراید</div><div class="pdesc">فول ست نتراید با انچانت حرفه‌ای</div><div class="pprice"><div><span class="pval"><span class="cur">تومان</span>۶۵٬۰۰۰</span></div><button class="bbt" onclick="openPay('کیت نتراید',65000)">خرید</button></div></div>
+        <div class="pc"><span class="badge bs">تخفیف</span><div class="picon">💎</div><div class="pname">کیت الماس</div><div class="pdesc">ست کامل الماس با انچانت سطح بالا</div><div class="pprice"><div><span class="pold">۴۵٬۰۰۰</span><span class="pval"><span class="cur">تومان</span>۳۰٬۰۰۰</span></div><button class="bbt" onclick="openPay('کیت الماس',30000)">خرید</button></div></div>
+        <div class="pc"><div class="picon">🔮</div><div class="pname">بسته الکسیر</div><div class="pdesc">۳۲ پوشن قدرت، سرعت و مقاومت</div><div class="pprice"><div><span class="pval"><span class="cur">تومان</span>۱۸٬۰۰۰</span></div><button class="bbt" onclick="openPay('بسته الکسیر',18000)">خرید</button></div></div>
+        <div class="pc"><span class="badge bl">محدود</span><div class="picon">🏆</div><div class="pname">بسته سکه ×۵۰۰۰</div><div class="pdesc">۵۰۰۰ سکه درون‌سرور</div><div class="pprice"><div><span class="pval"><span class="cur">تومان</span>۲۵٬۰۰۰</span></div><button class="bbt" onclick="openPay('بسته سکه ×۵۰۰۰',25000)">خرید</button></div></div>
+        <div class="pc"><div class="picon">⭐</div><div class="pname">بوستر x2 تجربه</div><div class="pdesc">دو برابر تجربه برای ۷۲ ساعت</div><div class="pprice"><div><span class="pval"><span class="cur">تومان</span>۲۰٬۰۰۰</span></div><button class="bbt" onclick="openPay('بوستر x2 تجربه',20000)">خرید</button></div></div>
+      </div>
+    </div>
+    <div class="tp" id="tp-keys">
+      <div class="stl"><div class="dot"></div>کلیدهای کریت</div>
+      <div class="prods">
+        <div class="pc"><div class="picon">🗝️</div><div class="pname">کلید کریت رایج</div><div class="pdesc">شانس آیتم رایج و ابزار</div><div class="pprice"><div><span class="pval"><span class="cur">تومان</span>۸٬۰۰۰</span></div><button class="bbt" onclick="openPay('کلید کریت رایج',8000)">خرید</button></div></div>
+        <div class="pc"><span class="badge bh">پرفروش</span><div class="picon">🔑</div><div class="pname">کلید کریت نادر</div><div class="pdesc">شانس آیتم نادر و رنک تریال</div><div class="pprice"><div><span class="pval"><span class="cur">تومان</span>۱۵٬۰۰۰</span></div><button class="bbt" onclick="openPay('کلید کریت نادر',15000)">خرید</button></div></div>
+        <div class="pc"><span class="badge bl">محدود</span><div class="picon">💠</div><div class="pname">کلید کریت افسانه‌ای</div><div class="pdesc">شانس ست نتراید و رنک VIP</div><div class="pprice"><div><span class="pval"><span class="cur">تومان</span>۳۵٬۰۰۰</span></div><button class="bbt" onclick="openPay('کلید کریت افسانه‌ای',35000)">خرید</button></div></div>
+        <div class="pc"><span class="badge bn">جدید</span><div class="picon">🎁</div><div class="pname">بسته ۵ کلید رایج</div><div class="pdesc">۵ کلید رایج با ۱۵٪ تخفیف</div><div class="pprice"><div><span class="pold">۴۰٬۰۰۰</span><span class="pval"><span class="cur">تومان</span>۳۴٬۰۰۰</span></div><button class="bbt" onclick="openPay('بسته ۵ کلید',34000)">خرید</button></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ STAFF PAGE ═══ -->
+<div class="page" id="page-staff">
+  <div class="wrap" style="padding-top:2.5rem">
+    <div class="staff-hero">
+      <h2>به تیم <em>9 Minecraft</em> بپیوندید</h2>
+      <p>آیا علاقه‌مند به مدیریت سرور، کمک به بازیکنان و رشد در یک تیم حرفه‌ای هستید؟ فرم استاف شدن را تکمیل کنید و منتظر تماس ما باشید.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScg_uW5qBTeP17cA4EzLwpBL5GPyYSN2AlfrYJDtWYzrHAU_Q/viewform?usp=header" target="_blank" class="staff-apply-btn">
+        📝 ثبت فرم درخواست استاف
+      </a>
+    </div>
+    <div class="stl"><div class="dot"></div>موقعیت‌های شغلی</div>
+    <div class="staff-positions">
+      <div class="pos-card"><div class="pos-icon">🛡️</div><div class="pos-name">مادراتور</div><div class="pos-desc">مدیریت چت، رسیدگی به گزارش‌ها و حل تعارض بین بازیکنان</div></div>
+      <div class="pos-card"><div class="pos-icon">🔧</div><div class="pos-name">ادمین فنی</div><div class="pos-desc">نگهداری سرور، رفع باگ‌ها و بهینه‌سازی عملکرد</div></div>
+      <div class="pos-card"><div class="pos-icon">🎨</div><div class="pos-name">بیلدر</div><div class="pos-desc">طراحی و ساخت ساختمان‌ها و محیط‌های خلاقانه در سرور</div></div>
+      <div class="pos-card"><div class="pos-icon">🎧</div><div class="pos-name">پشتیبانی</div><div class="pos-desc">پاسخ به تیکت‌های کاربران و راهنمایی بازیکنان جدید</div></div>
+      <div class="pos-card"><div class="pos-icon">📢</div><div class="pos-name">دیزاینر</div><div class="pos-desc">طراحی بنر، پوستر و محتوای گرافیکی برای سرور</div></div>
+      <div class="pos-card"><div class="pos-icon">🎬</div><div class="pos-name">یوتیوبر / استریمر</div><div class="pos-desc">تولید محتوا و معرفی سرور به مخاطبان گسترده‌تر</div></div>
+    </div>
+    <div class="staff-reqs">
+      <h3>✅ شرایط عمومی استاف شدن</h3>
+      <ul class="req-list">
+        <li>حداقل ۱۴ سال سن</li>
+        <li>فعالیت منظم در سرور (۱۰+ ساعت در هفته)</li>
+        <li>توانایی کار تیمی</li>
+        <li>رفتار محترمانه با دیگران</li>
+        <li>عدم سابقه بن دائمی در سرور</li>
+        <li>آشنایی با قوانین سرور</li>
+        <li>داشتن میکروفون برای ارتباط</li>
+        <li>صبر و پشتکار در کار</li>
+      </ul>
+    </div>
+    <div style="text-align:center;padding:1rem 0 2rem">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScg_uW5qBTeP17cA4EzLwpBL5GPyYSN2AlfrYJDtWYzrHAU_Q/viewform?usp=header" target="_blank" class="staff-apply-btn">
+        📝 ارسال فرم درخواست ←
+      </a>
+      <p style="color:var(--mu);font-size:.78rem;margin-top:1rem">فرم در Google Forms باز می‌شود. پاسخ‌دهی تا ۷۲ ساعت</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SUPPORT PAGE ═══ -->
+<div class="page" id="page-support">
+  <div class="dw">
+    <div class="dhdr"><h1>🎧 پشتیبانی <em>9MC</em></h1><button class="btn btn-g" onclick="openNewTkt()">+ تیکت جدید</button></div>
+    <div class="scards" style="margin-bottom:1.5rem">
+      <div class="sc"><div class="scl">پاسخ‌دهی</div><div class="scv" style="font-size:.9rem;margin-top:6px">زیر ۱ ساعت</div></div>
+      <div class="sc"><div class="scl">ساعت کاری</div><div class="scv" style="font-size:.9rem;margin-top:6px">۸ صبح—۱۲ شب</div></div>
+      <div class="sc"><div class="scl">تیکت‌های باز</div><div class="scv" id="sup-open">—</div></div>
+    </div>
+    <div class="cb"><h3>📋 تیکت‌های من</h3><div class="tlist" id="sup-tlist"><div class="empty-msg">برای مشاهده تیکت‌ها وارد شوید</div></div></div>
+    <div class="cb" id="sup-detail" style="display:none">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:.8rem">
+        <h3 id="sup-dtitle" style="border:none;padding:0;margin:0"></h3>
+        <button class="btn btn-o" style="font-size:.74rem;padding:5px 10px" onclick="document.getElementById('sup-detail').style.display='none'">← برگشت</button>
+      </div>
+      <div class="tchat" id="sup-chat"></div>
+      <div class="treply" id="sup-reply">
+        <input id="sup-inp" placeholder="پیام..." onkeydown="if(event.key==='Enter')sendUserReply('sup')">
+        <button class="btn btn-g" style="padding:7px 12px;font-size:.76rem" onclick="sendUserReply('sup')">ارسال</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DASHBOARD PAGE ═══ -->
+<div class="page" id="page-dash">
+  <div class="dw">
+    <div class="dhdr"><h1>داشبورد <em id="dwel">کاربر</em></h1><button class="btn btn-o" onclick="goPage('shop')">← فروشگاه</button></div>
+    <div class="dgrid">
+      <div class="dsb">
+        <div class="dni active" onclick="sdp('ov',this)">📊 خلاصه</div>
+        <div class="dni" onclick="sdp('mc',this)">⛏️ ماینکرفت</div>
+        <div class="dni" onclick="sdp('ord',this)">🛒 سفارشات</div>
+        <div class="dni" onclick="sdp('tkt',this)">🎧 تیکت‌ها</div>
+        <div class="dni" onclick="sdp('prf',this)">👤 پروفایل</div>
+        <div class="dni" onclick="sdp('sec',this)">🔒 امنیت</div>
+      </div>
+      <div style="min-width:0">
+        <div class="dp active" id="dp-ov">
+          <div class="scards">
+            <div class="sc"><div class="scl">سفارشات</div><div class="scv" id="d-oc">—</div></div>
+            <div class="sc"><div class="scl">رنک فعلی</div><div class="scv" style="font-size:.85rem;margin-top:7px" id="d-rk">—</div></div>
+            <div class="sc"><div class="scl">وضعیت MC</div><div class="scv" style="font-size:.8rem;margin-top:7px" id="d-mc">—</div></div>
+            <div class="sc"><div class="scl">تیکت باز</div><div class="scv" id="d-tc">—</div></div>
+          </div>
+          <div class="cb"><h3>⚡ سفارشات اخیر</h3><div id="d-act" class="empty-msg">در حال بارگذاری...</div></div>
+          <div class="cb"><h3>🎮 سرور</h3><div style="font-size:.8rem;line-height:2.4;color:var(--mu)"><div><span class="odot"></span>آنلاین — <strong style="color:var(--g)">۱٬۲۴۸</strong> بازیکن</div><div>آی‌پی: <strong style="color:var(--tx)">9mc.ir</strong></div><div>پورت: <strong style="color:var(--tx)">25565</strong></div><div>نسخه: <strong style="color:var(--tx)">1.20.x — 1.21.x</strong></div></div></div>
+        </div>
+        <div class="dp" id="dp-mc">
+          <div class="cb"><h3>⛏️ اتصال اکانت ماینکرفت</h3>
+            <div class="mclink">
+              <div class="mcav" id="mc-av">🌍</div>
+              <div>
+                <div style="font-size:.96rem;font-weight:700;margin-bottom:3px" id="mc-un">هنوز متصل نشده</div>
+                <span class="mcs off" id="mc-badge">⚠ متصل نیست</span>
+                <p style="font-size:.73rem;color:var(--mu);margin-top:7px;line-height:1.6">با اتصال اکانت، خریدها به‌صورت خودکار اعمال می‌شوند.</p>
+              </div>
+            </div>
+            <div class="mclf" id="mc-lf"><input id="mc-inp" placeholder="یوزرنیم ماینکرفت..."><button class="btn btn-g" style="padding:7px 13px" onclick="linkMC()">اتصال</button></div>
+            <div id="mc-ua" style="display:none;margin-top:.7rem"><button class="btn btn-o" style="border-color:var(--red);color:var(--red);font-size:.78rem" onclick="unlinkMC()">قطع اتصال</button></div>
+          </div>
+          <div class="cb"><h3>📋 راهنما</h3><ol style="font-size:.78rem;color:var(--mu);line-height:2.3;padding-right:1.1rem"><li>یوزرنیم ماینکرفت را وارد کنید</li><li>روی «اتصال» بزنید</li><li>وارد سرور <strong style="color:var(--tx)">9mc.ir</strong> شوید</li><li>دستور <code style="background:#0a0a0a;padding:2px 5px">/link [کد]</code> را بزنید</li><li>اتصال تأیید می‌شود ✓</li></ol></div>
+        </div>
+        <div class="dp" id="dp-ord">
+          <div class="cb"><h3>🛒 تاریخچه سفارشات</h3>
+            <table class="ot"><thead><tr><th>#</th><th>آیتم</th><th>مبلغ</th><th>پیگیری</th><th>تاریخ</th><th>وضعیت</th></tr></thead><tbody id="ord-tb"></tbody></table>
+          </div>
+        </div>
+        <div class="dp" id="dp-tkt">
+          <div class="cb"><h3>🎧 تیکت‌های من</h3>
+            <div style="display:flex;justify-content:flex-end;margin-bottom:.8rem"><button class="btn btn-g" style="padding:6px 13px;font-size:.76rem" onclick="openNewTkt()">+ تیکت جدید</button></div>
+            <div class="tlist" id="dash-tlist"></div>
+            <div id="dash-tdetail" style="display:none;margin-top:.9rem">
+              <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:7px;margin-bottom:.7rem">
+                <strong id="dash-dtitle" style="font-size:.86rem"></strong>
+                <button class="btn btn-o" style="font-size:.72rem;padding:4px 9px" onclick="document.getElementById('dash-tdetail').style.display='none'">← برگشت</button>
+              </div>
+              <div class="tchat" id="dash-chat"></div>
+              <div class="treply"><input id="dash-inp" placeholder="پیام..." onkeydown="if(event.key==='Enter')sendUserReply('dash')"><button class="btn btn-g" style="padding:7px 11px;font-size:.74rem" onclick="sendUserReply('dash')">ارسال</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="dp" id="dp-prf">
+          <div class="cb"><h3>👤 ویرایش پروفایل</h3>
+            <div class="nb" id="prf-nb">✓ پروفایل ذخیره شد</div>
+            <div class="pr"><div class="ff"><label>نام</label><input id="pf-fn"></div><div class="ff"><label>نام خانوادگی</label><input id="pf-ln"></div></div>
+            <div class="pr"><div class="ff"><label>نام کاربری (قابل تغییر نیست)</label><input id="pf-u" readonly style="opacity:.5;cursor:not-allowed"></div><div class="ff"><label>ایمیل</label><input type="email" id="pf-e"></div></div>
+            <div class="pr"><div class="ff"><label>شماره تماس</label><input type="tel" id="pf-ph" dir="ltr"></div><div class="ff"><label>استان</label><select id="pf-pv"><option value="">انتخاب...</option><option>تهران</option><option>اصفهان</option><option>مشهد</option><option>شیراز</option><option>تبریز</option><option>سایر</option></select></div></div>
+            <button class="btn btn-g" style="padding:8px 20px;margin-top:.3rem" onclick="savePrf()">ذخیره</button>
+          </div>
+        </div>
+        <div class="dp" id="dp-sec">
+          <div class="cb"><h3>🔒 تغییر رمز عبور</h3>
+            <div class="nb" id="sec-nb">✓ رمز تغییر یافت</div>
+            <div class="ff" style="margin-bottom:8px"><label>رمز فعلی</label><input type="password" id="po"></div>
+            <div class="ff" style="margin-bottom:8px"><label>رمز جدید</label><input type="password" id="pn"></div>
+            <div class="ff" style="margin-bottom:12px"><label>تکرار رمز جدید</label><input type="password" id="pc2"></div>
+            <div class="aerr" id="sec-err" style="margin-bottom:8px"></div>
+            <button class="btn btn-g" style="padding:8px 20px" onclick="changePw()">تغییر رمز</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ADMIN PAGE ═══ -->
+<div class="page" id="page-admin">
+  <div class="aw">
+    <div class="atop">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><h1>پنل <em>ادمین</em></h1><span class="abadge">🔴 دسترسی ادمین</span></div>
+      <div style="display:flex;gap:7px;flex-wrap:wrap"><button class="btn btn-o" onclick="goPage('dash')">← داشبورد</button><button class="btn btn-o" onclick="goPage('shop')">← فروشگاه</button></div>
+    </div>
+    <div class="agrid">
+      <div>
+        <div class="ani active" onclick="sap('dash',this)">📊 داشبورد</div>
+        <div class="ani" onclick="sap('users',this)">👥 کاربران</div>
+        <div class="ani" onclick="sap('orders',this)">🛒 سفارشات</div>
+        <div class="ani" onclick="sap('tickets',this)">🎧 تیکت‌ها</div>
+        <div class="ani" onclick="sap('staff',this)">📝 فرم‌های استاف</div>
+        <div class="ani" onclick="sap('pay',this)">💳 تنظیم پرداخت</div>
+        <div class="ani" onclick="sap('admins',this)">⚡ مدیران</div>
+        <div class="ani" onclick="sap('srv',this)">⚙️ سرور</div>
+      </div>
+      <div style="min-width:0">
+        <div class="ap active" id="ap-dash">
+          <div class="ascards">
+            <div class="asc"><div class="ascl">کاربران</div><div class="ascv ab" id="a-users">—</div></div>
+            <div class="asc"><div class="ascl">سفارشات</div><div class="ascv ago" id="a-orders">—</div></div>
+            <div class="asc"><div class="ascl">تیکت باز</div><div class="ascv ar" id="a-tkts">—</div></div>
+            <div class="asc"><div class="ascl">در انتظار</div><div class="ascv ago" id="a-pend">—</div></div>
+            <div class="asc"><div class="ascl">MC متصل</div><div class="ascv ag" id="a-mc">—</div></div>
+            <div class="asc"><div class="ascl">درآمد کل</div><div class="ascv ag" style="font-size:1rem;margin-top:5px" id="a-rev">—</div></div>
+          </div>
+          <div class="cb"><h3>📈 فروش ۷ روز اخیر</h3><div class="chart" id="a-chart"></div></div>
+          <div class="cb"><h3>📋 آخرین سفارشات</h3><table class="at"><thead><tr><th>#</th><th>کاربر</th><th>آیتم</th><th>مبلغ</th><th>وضعیت</th><th>عملیات</th></tr></thead><tbody id="a-rec"></tbody></table></div>
+        </div>
+        <div class="ap" id="ap-users">
+          <div class="tbar"><input class="isrch" id="usrch" placeholder="جستجو..." oninput="loadAdminUsers()"><span style="font-size:.75rem;color:var(--mu)">مجموع: <strong id="ucnt">—</strong></span></div>
+          <div class="cb" style="padding:0;overflow:auto"><table class="at"><thead><tr><th>#</th><th>کاربری</th><th>ایمیل</th><th>رنک</th><th>MC</th><th>وضعیت</th><th>عملیات</th></tr></thead><tbody id="a-utb"></tbody></table></div>
+        </div>
+        <div class="ap" id="ap-orders">
+          <div class="tbar">
+            <span style="font-weight:700;font-size:.84rem">سفارشات</span>
+            <select id="ord-flt" onchange="loadAdminOrders()" style="background:#0a0a0a;border:1px solid var(--bor);color:var(--tx);padding:5px 9px;font-family:'Vazirmatn',sans-serif;font-size:.76rem;outline:none">
+              <option value="all">همه</option><option value="pending">در انتظار</option><option value="done">تأیید شده</option><option value="rejected">رد شده</option>
+            </select>
+          </div>
+          <div class="cb" style="padding:0;overflow:auto"><table class="at"><thead><tr><th>#</th><th>کاربر</th><th>آیتم</th><th>مبلغ</th><th>پیگیری</th><th>تاریخ</th><th>وضعیت</th><th>عملیات</th></tr></thead><tbody id="a-otb"></tbody></table></div>
+        </div>
+        <div class="ap" id="ap-tickets">
+          <div class="tbar">
+            <span style="font-weight:700;font-size:.84rem">تیکت‌ها</span>
+            <select id="tkt-flt" onchange="loadAdminTickets()" style="background:#0a0a0a;border:1px solid var(--bor);color:var(--tx);padding:5px 9px;font-family:'Vazirmatn',sans-serif;font-size:.76rem;outline:none">
+              <option value="all">همه</option><option value="open">باز</option><option value="pending">در انتظار</option><option value="closed">بسته</option>
+            </select>
+          </div>
+          <div class="tlist" id="a-tlist"></div>
+          <div class="cb" id="a-tdetail" style="display:none;margin-top:11px">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:7px;margin-bottom:.7rem">
+              <strong id="a-dtitle" style="font-size:.86rem"></strong>
+              <div style="display:flex;gap:4px;flex-wrap:wrap">
+                <button class="ab2 gold" onclick="setTktSt('pending')">در انتظار</button>
+                <button class="ab2" onclick="setTktSt('closed')">بستن</button>
+                <button class="ab2" onclick="document.getElementById('a-tdetail').style.display='none'">← برگشت</button>
+              </div>
+            </div>
+            <div class="tchat" id="a-chat"></div>
+            <div class="treply"><input id="a-inp" placeholder="پاسخ ادمین..." onkeydown="if(event.key==='Enter')sendAdminReply()"><button class="btn" style="background:var(--red);color:#fff;padding:7px 11px;font-size:.74rem" onclick="sendAdminReply()">پاسخ</button></div>
+          </div>
+        </div>
+        <div class="ap" id="ap-staff">
+          <div class="tbar"><span style="font-weight:700;font-size:.84rem">فرم‌های استاف دریافتی</span></div>
+          <div class="cb" style="padding:1.2rem">
+            <p style="font-size:.82rem;color:var(--mu);line-height:1.8;margin-bottom:1rem">پاسخ‌های فرم استاف مستقیم در Google Forms ثبت می‌شوند. برای مشاهده روی لینک زیر کلیک کنید:</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScg_uW5qBTeP17cA4EzLwpBL5GPyYSN2AlfrYJDtWYzrHAU_Q/viewform" target="_blank" class="btn btn-g" style="display:inline-block;text-decoration:none">مشاهده پاسخ‌های فرم در Google ←</a>
+          </div>
+        </div>
+        <div class="ap" id="ap-pay">
+          <div class="cb"><h3>💳 تنظیم کارت پرداخت</h3>
+            <div class="nb" id="pay-nb">✓ ذخیره شد</div>
+            <div class="cdisp">
+              <div class="cnum" id="a-cnum">—</div>
+              <div class="cown" id="a-cown"></div>
+              <div class="cown" id="a-cbk" style="font-size:.7rem;margin-top:2px"></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:1rem;flex-wrap:wrap">
+              <span style="font-size:.76rem;color:var(--mu)">وضعیت:</span>
+              <span class="psbadge" id="pay-sbadge">—</span>
+              <button class="ab2" onclick="togglePayActive()">تغییر وضعیت</button>
+            </div>
+            <div class="pr"><div class="ff"><label>شماره کارت (۱۶ رقم)</label><input id="a-card" maxlength="16" dir="ltr" placeholder="6219861012345678" oninput="prevCard()"></div><div class="ff"><label>نام صاحب کارت</label><input id="a-owner" placeholder="علی محمدی" oninput="prevCard()"></div></div>
+            <div class="ff" style="margin-bottom:1rem"><label>نام بانک</label><input id="a-bank" placeholder="بانک ملت..." oninput="prevCard()"></div>
+            <button class="btn btn-g" style="padding:8px 20px" onclick="savePaySettings()">ذخیره</button>
+          </div>
+        </div>
+        <div class="ap" id="ap-admins">
+          <div class="cb"><h3>⚡ لیست مدیران</h3>
+            <div class="nb" id="adm-nb">✓ ادمین اضافه شد</div>
+            <table class="at" style="margin-bottom:1.3rem"><thead><tr><th>#</th><th>کاربری</th><th>ایمیل</th><th>سطح</th><th>عملیات</th></tr></thead><tbody id="adm-list"></tbody></table>
+            <h3 style="font-size:.9rem;border-top:1px solid var(--bor);padding-top:.8rem;margin-bottom:.8rem">+ افزودن ادمین</h3>
+            <div class="aerr" id="adm-err"></div>
+            <div class="pr"><div class="ff"><label>نام</label><input id="na-fn" placeholder="نام"></div><div class="ff"><label>نام خانوادگی</label><input id="na-ln" placeholder="نام خانوادگی"></div></div>
+            <div class="pr"><div class="ff"><label>نام کاربری</label><input id="na-u" placeholder="username"></div><div class="ff"><label>ایمیل</label><input type="email" id="na-e" placeholder="admin@9mc.ir"></div></div>
+            <div class="pr"><div class="ff"><label>رمز عبور</label><input type="password" id="na-p" placeholder="حداقل ۶ کاراکتر"></div><div class="ff"><label>سطح دسترسی</label><select id="na-lv"><option value="support">پشتیبانی</option><option value="moderator">مادراتور</option><option value="superadmin">سوپر ادمین</option></select></div></div>
+            <button class="btn" style="background:var(--red);color:#fff;clip-path:polygon(0 0,calc(100% - 4px) 0,100% 4px,100% 100%,4px 100%,0 calc(100% - 4px));padding:8px 20px;margin-top:.3rem" onclick="addAdmin()">افزودن ادمین</button>
+          </div>
+        </div>
+        <div class="ap" id="ap-srv">
+          <div class="cb"><h3>⚙️ تنظیمات سرور</h3>
+            <div class="nb" id="srv-nb">✓ ذخیره شد</div>
+            <div class="pr"><div class="ff"><label>آی‌پی</label><input id="s-ip" value="9mc.ir" dir="ltr"></div><div class="ff"><label>پورت</label><input id="s-port" value="25565" dir="ltr"></div></div>
+            <div class="pr"><div class="ff"><label>نسخه</label><input id="s-ver" value="1.20.x — 1.21.x"></div><div class="ff"><label>ظرفیت</label><input type="number" id="s-cap" value="2000"></div></div>
+            <button class="btn btn-g" style="padding:8px 20px;margin-top:.3rem" onclick="showNb('srv-nb')">ذخیره</button>
+          </div>
+          <div class="cb"><h3>🔴 عملیات سرور</h3>
+            <div style="display:flex;gap:9px;flex-wrap:wrap">
+              <button class="btn btn-o" onclick="alert('Restart ارسال شد ✓')">♻️ ری‌استارت</button>
+              <button class="btn btn-o" style="border-color:var(--gold);color:var(--gold)" onclick="alert('بک‌آپ در حال ساخت...')">💾 بک‌آپ</button>
+              <button class="btn btn-o" style="border-color:var(--red);color:var(--red)" onclick="if(confirm('مطمئنید؟'))alert('سرور خاموش شد')">⏻ خاموش</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><strong>9 Minecraft</strong> &nbsp;·&nbsp; تمامی حقوق محفوظ است &nbsp;·&nbsp; ساخته شده با ❤️ برای جامعه ماینکرفت ایران</footer>
+
+<script>
+// ══════════ CONFIG ══════════
+const API = 'api/api.php'; // مسیر فایل PHP
+
+// ══════════ API CALL ══════════
+async function api(action, data={}) {
+  try {
+    const r = await fetch(API, {
+      method:'POST', credentials:'include',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({action, ...data})
+    });
+    return await r.json();
+  } catch(e) {
+    return {ok:false, msg:'خطا در اتصال به سرور: '+e.message};
+  }
+}
+
+// ══════════ STATE ══════════
+let CU = null;
+let payItem = {name:'',price:0};
+let curTktId = null;
+let admTktId = null;
+let paySettings = {card:'',owner:'',bank:'',active:false};
+
+// ══════════ INIT ══════════
+(async function(){
+  const r = await api('me');
+  if(r.ok){ CU=r.data; afterLogin(false); }
+})();
+
+// ══════════ AUTH ══════════
+async function doLogin(){
+  const u=document.getElementById('lu').value.trim();
+  const p=document.getElementById('lp').value;
+  setBtnLoading('login-btn',true);
+  const r=await api('login',{u,pw:p});
+  setBtnLoading('login-btn',false);
+  if(!r.ok){showErr('lerr',r.msg);return;}
+  CU=r.data; afterLogin(); closeAll();
+}
+async function doRegister(){
+  const fn=document.getElementById('rfn').value.trim(),ln=document.getElementById('rln').value.trim();
+  const u=document.getElementById('ru').value.trim(),e=document.getElementById('re').value.trim();
+  const p=document.getElementById('rp').value;
+  setBtnLoading('reg-btn',true);
+  const r=await api('register',{fn,ln,u,email:e,pw:p});
+  setBtnLoading('reg-btn',false);
+  if(!r.ok){showErr('rerr',r.msg);return;}
+  CU=r.data; afterLogin(); closeAll();
+}
+async function doLogout(){
+  await api('logout');
+  CU=null;
+  document.getElementById('hdr-g').style.display='flex';
+  document.getElementById('hdr-u').style.display='none';
+  document.getElementById('nv-dash').style.display='none';
+  document.getElementById('admin-btn').style.display='none';
+  goPage('shop');
+}
+function afterLogin(navigate=true){
+  document.getElementById('hdr-g').style.display='none';
+  document.getElementById('hdr-u').style.display='flex';
+  document.getElementById('hdr-av').textContent=CU.fn?CU.fn[0]:CU.u[0];
+  document.getElementById('hdr-un').textContent=CU.u;
+  document.getElementById('nv-dash').style.display='';
+  document.getElementById('admin-btn').style.display=CU.isAdmin?'':'none';
+  if(navigate) goPage('dash');
+  else loadDash();
+}
+
+// ══════════ PAGES ══════════
+function goPage(p){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
+  const m={shop:'nv-shop',dash:'nv-dash',support:'nv-sup',staff:'nv-staff'};
+  if(m[p]) document.getElementById(m[p]).classList.add('active');
+  if(p==='dash'&&CU) loadDash();
+  if(p==='support') loadSupport();
+  if(p==='admin') loadAdmin();
+  window.scrollTo(0,0);
+}
+function stab(n,btn){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tp').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active'); document.getElementById('tp-'+n).classList.add('active');
+}
+
+// ══════════ PAYMENT ══════════
+async function openPay(name,price){
+  if(!CU){openM('login');return;}
+  payItem={name,price};
+  document.getElementById('pay-cnum').textContent='در حال بارگذاری...';
+  document.getElementById('ov-pay').classList.add('open');
+  const r=await api('get_payment_info');
+  if(!r.ok){closeAll();alert(r.msg);return;}
+  const ps=r.data;
+  document.getElementById('pay-cnum').textContent=ps.card;
+  document.getElementById('pay-cname').textContent='به نام: '+ps.owner;
+  document.getElementById('pay-cbk').textContent=ps.bank;
+  document.getElementById('pay-amt').textContent=price.toLocaleString('fa');
+  document.getElementById('pay-ref').value='';
+  document.getElementById('pay-err').classList.remove('show');
+}
+async function confirmPay(){
+  const ref=document.getElementById('pay-ref').value.trim();
+  if(!ref){showErr('pay-err','شماره پیگیری الزامی است');return;}
+  setBtnLoading('pay-btn',true);
+  const r=await api('create_order',{item:payItem.name,price:payItem.price,ref});
+  setBtnLoading('pay-btn',false);
+  if(!r.ok){showErr('pay-err',r.msg);return;}
+  closeAll();
+  alert('✓ سفارش ثبت شد!\n\nپیگیری: '+ref+'\n\nپس از تأیید ادمین فعال می‌شود.');
+  loadDash();
+}
+
+// ══════════ DASHBOARD ══════════
+async function loadDash(){
+  if(!CU)return;
+  const r=await api('me');
+  if(r.ok) CU=r.data;
+  document.getElementById('dwel').textContent=CU.fn||CU.u;
+  document.getElementById('d-rk').textContent=CU.rank||'—';
+  const mc=!!CU.mc;
+  document.getElementById('d-mc').textContent=mc?CU.mc:'متصل نیست';
+  document.getElementById('d-mc').style.color=mc?'var(--g)':'var(--red)';
+  // MC panel
+  document.getElementById('mc-un').textContent=mc?CU.mc:'هنوز متصل نشده';
+  document.getElementById('mc-av').textContent=mc?'⛏️':'🌍';
+  const b=document.getElementById('mc-badge');b.textContent=mc?'✓ متصل':'⚠ متصل نیست';b.className='mcs '+(mc?'on':'off');
+  document.getElementById('mc-lf').style.display=mc?'none':'flex';
+  document.getElementById('mc-ua').style.display=mc?'block':'none';
+  // profile
+  document.getElementById('pf-fn').value=CU.fn||'';document.getElementById('pf-ln').value=CU.ln||'';
+  document.getElementById('pf-u').value=CU.u;document.getElementById('pf-e').value=CU.email||'';
+  document.getElementById('pf-ph').value=CU.ph||'';document.getElementById('pf-pv').value=CU.pv||'';
+  // orders
+  const or=await api('my_orders');
+  if(or.ok){
+    document.getElementById('d-oc').textContent=toFa(or.data.length);
+    const tb=document.getElementById('ord-tb');
+    tb.innerHTML=or.data.length?or.data.map((o,i)=>`<tr><td>#${i+1}</td><td>${o.item}</td><td>${o.price.toLocaleString('fa')} ت</td><td style="direction:ltr;font-size:.71rem">${o.ref}</td><td style="font-size:.72rem">${o.date}</td><td><span class="os ${o.st==='done'?'done':o.st==='rejected'?'rej':'pend'}">${stLbl(o.st)}</span></td></tr>`).join(''):'<tr><td colspan="6" class="empty-msg">هنوز سفارشی ثبت نشده</td></tr>';
+    const act=document.getElementById('d-act');
+    act.innerHTML=or.data.length?or.data.slice(0,4).map(o=>`<div style="font-size:.79rem;padding:4px 0;border-bottom:1px solid #1e1e1e;line-height:2">🛒 <strong>${o.item}</strong> — ${o.price.toLocaleString('fa')} ت <span class="os ${o.st==='done'?'done':o.st==='rejected'?'rej':'pend'}" style="margin-right:5px">${stLbl(o.st)}</span></div>`).join(''):'<div class="empty-msg">هنوز فعالیتی ثبت نشده</div>';
+  }
+  // tickets
+  const tr=await api('my_tickets');
+  if(tr.ok){
+    const open=tr.data.filter(t=>t.st!=='closed').length;
+    document.getElementById('d-tc').textContent=toFa(open);
+    renderTktList(tr.data,'dash-tlist','openDashTkt');
+  }
+}
+function sdp(n,el){
+  document.querySelectorAll('.dni').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.dp').forEach(x=>x.classList.remove('active'));
+  el.classList.add('active'); document.getElementById('dp-'+n).classList.add('active');
+}
+function stLbl(s){return s==='done'?'✓ تأیید':s==='rejected'?'✕ رد شد':'⏳ در انتظار';}
+
+async function linkMC(){
+  const mc=document.getElementById('mc-inp').value.trim();
+  if(!mc)return;
+  const r=await api('link_mc',{mc});
+  if(r.ok){CU.mc=mc;loadDash();}else alert(r.msg);
+}
+async function unlinkMC(){
+  if(!confirm('اتصال قطع شود؟'))return;
+  const r=await api('unlink_mc');
+  if(r.ok){CU.mc='';loadDash();}
+}
+async function savePrf(){
+  const r=await api('update_profile',{fn:document.getElementById('pf-fn').value,ln:document.getElementById('pf-ln').value,email:document.getElementById('pf-e').value,ph:document.getElementById('pf-ph').value,pv:document.getElementById('pf-pv').value});
+  if(r.ok){CU=r.data;document.getElementById('hdr-av').textContent=CU.fn?CU.fn[0]:CU.u[0];showNb('prf-nb');}else alert(r.msg);
+}
+async function changePw(){
+  const old=document.getElementById('po').value,nw=document.getElementById('pn').value,cf=document.getElementById('pc2').value;
+  const err=document.getElementById('sec-err');
+  if(nw!==cf){showErr('sec-err','رمزها مطابقت ندارند');return;}
+  const r=await api('change_pw',{old,new:nw,cf});
+  if(r.ok){err.classList.remove('show');document.getElementById('po').value='';document.getElementById('pn').value='';document.getElementById('pc2').value='';showNb('sec-nb');}else showErr('sec-err',r.msg);
+}
+
+// ══════════ TICKETS ══════════
+function openNewTkt(){if(!CU){openM('login');return;}document.getElementById('ov-tkt').classList.add('open');}
+async function submitTkt(){
+  const cat=document.getElementById('tkt-cat').value,subj=document.getElementById('tkt-subj').value.trim(),body=document.getElementById('tkt-body').value.trim();
+  if(!cat||!subj||!body){showErr('tkt-err','همه فیلدها الزامی است');return;}
+  setBtnLoading('tkt-btn',true);
+  const r=await api('create_ticket',{cat,subj,body});
+  setBtnLoading('tkt-btn',false);
+  if(!r.ok){showErr('tkt-err',r.msg);return;}
+  closeAll();loadDash();loadSupport();alert('✓ تیکت ارسال شد.');
+}
+function renderTktList(tkts,elId,fn){
+  const el=document.getElementById(elId);if(!el)return;
+  const cl={open:'open',pending:'pend',closed:'closed'};
+  const lb={open:'باز',pending:'در انتظار',closed:'بسته'};
+  el.innerHTML=tkts.length?tkts.map(t=>{const last=t.msgs[t.msgs.length-1];return`<div class="ti" onclick="${fn}(${t.id})"><div class="tih"><span class="tit">${t.subj}</span><span class="ts ${cl[t.st]||'open'}">${lb[t.st]||t.st}</span></div><div class="tim">${t.cat} · ${t.date}</div><div class="tprev">${last?last.text:''}</div></div>`}).join(''):'<div class="empty-msg">تیکتی وجود ندارد</div>';
+}
+function renderChat(msgs,elId){
+  const el=document.getElementById(elId);if(!el)return;
+  el.innerHTML=msgs.map(m=>`<div class="msg ${m.from}"><div class="mname">${m.name} · ${m.time}</div>${m.text}</div>`).join('');
+  el.scrollTop=el.scrollHeight;
+}
+async function openDashTkt(id){
+  curTktId=id;const r=await api('get_ticket',{id});if(!r.ok)return;const t=r.data;
+  document.getElementById('dash-tdetail').style.display='block';
+  document.getElementById('dash-dtitle').textContent=t.subj;
+  renderChat(t.msgs,'dash-chat');
+}
+async function openSupTkt(id){
+  curTktId=id;const r=await api('get_ticket',{id});if(!r.ok)return;const t=r.data;
+  document.getElementById('sup-detail').style.display='block';
+  document.getElementById('sup-dtitle').textContent=t.subj+' ('+t.cat+')';
+  document.getElementById('sup-reply').style.display=t.st==='closed'?'none':'flex';
+  renderChat(t.msgs,'sup-chat');
+  document.getElementById('sup-detail').scrollIntoView({behavior:'smooth'});
+}
+async function sendUserReply(src){
+  const inpId=src==='sup'?'sup-inp':'dash-inp';
+  const chatId=src==='sup'?'sup-chat':'dash-chat';
+  const text=document.getElementById(inpId).value.trim();
+  if(!text||!curTktId)return;
+  const r=await api('ticket_reply',{id:curTktId,text});
+  if(r.ok){document.getElementById(inpId).value='';renderChat(r.data.msgs,chatId);loadDash();if(src==='sup')loadSupport();}
+}
+async function loadSupport(){
+  if(!CU){document.getElementById('sup-tlist').innerHTML='<div class="empty-msg">برای مشاهده تیکت‌ها وارد شوید</div>';document.getElementById('sup-open').textContent='—';return;}
+  const r=await api('my_tickets');
+  if(!r.ok)return;
+  document.getElementById('sup-open').textContent=toFa(r.data.filter(t=>t.st!=='closed').length);
+  renderTktList(r.data,'sup-tlist','openSupTkt');
+}
+
+// ══════════ ADMIN ══════════
+async function loadAdmin(){
+  const r=await api('admin_stats');
+  if(!r.ok)return;
+  const d=r.data;
+  document.getElementById('a-users').textContent=toFa(d.users||0);
+  document.getElementById('a-orders').textContent=toFa(d.orders||0);
+  document.getElementById('a-tkts').textContent=toFa(d.open_tickets||0);
+  document.getElementById('a-pend').textContent=toFa(d.pending_orders||0);
+  document.getElementById('a-mc').textContent=toFa(d.mc_linked||0);
+  document.getElementById('a-rev').textContent=(d.total_revenue||0).toLocaleString('fa')+' ت';
+  const vals=[320,580,210,740,890,450,d.total_revenue?Math.floor(d.total_revenue/1000):1235];
+  const days=['ش','ی','د','س','چ','پ','ج'];const mx=Math.max(...vals);
+  document.getElementById('a-chart').innerHTML=vals.map((v,i)=>`<div class="cc"><div class="cb2" style="height:${Math.round(v/mx*100)}px" title="${v}"></div><span>${days[i]}</span></div>`).join('');
+  await loadAdminOrders(); await loadAdminUsers(); await loadAdminTickets(); await loadPayUI(); await loadAdminList();
+  // recent
+  const or2=await api('admin_all_orders',{filter:'all'});
+  if(or2.ok){
+    const rec=or2.data.slice(0,6);
+    document.getElementById('a-rec').innerHTML=rec.length?rec.map((o,i)=>`<tr><td>#${i+1}</td><td>${o.user}</td><td>${o.item}</td><td>${o.price.toLocaleString('fa')} ت</td><td><span class="tg ${o.st==='done'?'g':o.st==='rejected'?'r':'o'}">${stLbl(o.st)}</span></td><td>${o.st==='pending'?`<button class="ab2" onclick="orderAct(${o.id},'done')">✓</button><button class="ab2 d" onclick="orderAct(${o.id},'rejected')">✕</button>`:'—'}</td></tr>`).join(''):'<tr><td colspan="6" class="empty-msg">سفارشی ثبت نشده</td></tr>';
+  }
+}
+function sap(n,el){
+  document.querySelectorAll('.ani').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.ap').forEach(x=>x.classList.remove('active'));
+  el.classList.add('active'); document.getElementById('ap-'+n).classList.add('active');
+}
+async function loadAdminUsers(){
+  const q=document.getElementById('usrch')?.value||'';
+  const r=await api('admin_users',{q});if(!r.ok)return;
+  document.getElementById('ucnt').textContent=r.data.length;
+  const lvl={support:'پشتیبانی',moderator:'مادراتور',superadmin:'سوپر ادمین'};
+  document.getElementById('a-utb').innerHTML=r.data.length?r.data.map((u,i)=>`<tr><td>${i+1}</td><td><strong>${u.u}</strong>${u.isAdmin?` <span class="tg r">${lvl[u.lvl]||'ادمین'}</span>`:''}</td><td style="color:var(--mu);font-size:.72rem">${u.email}</td><td><span class="tg ${u.rank!=='—'?'g':'r'}">${u.rank}</span></td><td>${u.mc?`<span class="tg b">${u.mc}</span>`:'<span class="tg r">—</span>'}</td><td><span class="tg ${u.banned?'r':'g'}">${u.banned?'بن':'فعال'}</span></td><td><button class="ab2" onclick="setRank(${u.id})">رنک</button><button class="ab2 d" onclick="banUser(${u.id},${!u.banned})">${u.banned?'رفع بن':'بن'}</button></td></tr>`).join(''):'<tr><td colspan="7" class="empty-msg">کاربری یافت نشد</td></tr>';
+}
+async function setRank(uid){
+  const u=prompt('رنک جدید (VIP / VIP+ / MVP / MVP+ / LEGEND / —):');
+  if(u===null)return;
+  const r=await api('admin_set_rank',{uid,rank:u.trim()});
+  if(r.ok)loadAdminUsers();else alert(r.msg);
+}
+async function banUser(uid,ban){
+  if(!confirm(ban?'کاربر بن شود؟':'بن برداشته شود؟'))return;
+  const r=await api('admin_ban_user',{uid,ban});
+  if(r.ok)loadAdminUsers();else alert(r.msg);
+}
+async function loadAdminOrders(){
+  const f=document.getElementById('ord-flt')?.value||'all';
+  const r=await api('admin_all_orders',{filter:f});if(!r.ok)return;
+  document.getElementById('a-otb').innerHTML=r.data.length?r.data.map((o,i)=>`<tr><td>#${i+1}</td><td>${o.user}</td><td>${o.item}</td><td>${o.price.toLocaleString('fa')} ت</td><td style="direction:ltr;font-size:.7rem">${o.ref||'—'}</td><td style="font-size:.7rem">${o.date}</td><td><span class="tg ${o.st==='done'?'g':o.st==='rejected'?'r':'o'}">${stLbl(o.st)}</span></td><td>${o.st==='pending'?`<button class="ab2" onclick="orderAct(${o.id},'done')">✓ تأیید</button><button class="ab2 d" onclick="orderAct(${o.id},'rejected')">✕ رد</button>`:'—'}</td></tr>`).join(''):'<tr><td colspan="8" class="empty-msg">سفارشی یافت نشد</td></tr>';
+}
+async function orderAct(id,act){
+  const r=await api('admin_order_action',{id,act});
+  if(r.ok){loadAdmin();}else alert(r.msg);
+}
+async function loadAdminTickets(){
+  const f=document.getElementById('tkt-flt')?.value||'all';
+  const r=await api('admin_all_tickets',{filter:f});if(!r.ok)return;
+  const cl={open:'open',pending:'pend',closed:'closed'};
+  const lb={open:'باز',pending:'در انتظار',closed:'بسته'};
+  const el=document.getElementById('a-tlist');
+  el.innerHTML=r.data.length?r.data.map(t=>{const last=t.msgs[t.msgs.length-1];return`<div class="ti" onclick="openAdmTkt(${t.id})"><div class="tih"><span class="tit">${t.subj} <span style="color:var(--mu);font-size:.72rem">(${t.uname})</span></span><span class="ts ${cl[t.st]||'open'}">${lb[t.st]||t.st}</span></div><div class="tim">${t.cat} · ${t.date}</div><div class="tprev">${last?last.text:''}</div></div>`}).join(''):'<div class="empty-msg">تیکتی یافت نشد</div>';
+}
+async function openAdmTkt(id){
+  admTktId=id;
+  const r=await api('get_ticket',{id});if(!r.ok)return;const t=r.data;
+  document.getElementById('a-tdetail').style.display='block';
+  document.getElementById('a-dtitle').textContent=`[${t.cat}] ${t.subj} — ${t.uname}`;
+  renderChat(t.msgs,'a-chat');
+  document.getElementById('a-tdetail').scrollIntoView({behavior:'smooth'});
+}
+async function sendAdminReply(){
+  const text=document.getElementById('a-inp').value.trim();if(!text||!admTktId)return;
+  const r=await api('admin_ticket_reply',{id:admTktId,text});
+  if(r.ok){document.getElementById('a-inp').value='';renderChat(r.data.msgs,'a-chat');loadAdminTickets();}
+}
+async function setTktSt(st){
+  if(!admTktId)return;
+  const r=await api('admin_ticket_status',{id:admTktId,st});
+  if(r.ok){loadAdminTickets();if(st==='closed')document.getElementById('a-tdetail').style.display='none';}
+}
+// PAY SETTINGS
+async function loadPayUI(){
+  const r=await api('get_payment_info');
+  // load full settings separately via admin check
+  const ps_raw=await api('admin_stats'); // get active status from indirect
+  // Show current card from payment info
+  if(r.ok){
+    document.getElementById('a-cnum').textContent=r.data.card||'—';
+    document.getElementById('a-cown').textContent=r.data.owner?'به نام: '+r.data.owner:'';
+    document.getElementById('a-cbk').textContent=r.data.bank||'';
+    document.getElementById('a-card').value=r.data.card?.replace(/-/g,'')||'';
+    document.getElementById('a-owner').value=r.data.owner||'';
+    document.getElementById('a-bank').value=r.data.bank||'';
+    const b=document.getElementById('pay-sbadge');b.textContent='✓ فعال';b.className='psbadge pson';
+  }
+}
+function prevCard(){
+  const raw=document.getElementById('a-card').value;
+  const fmt=raw.length===16?raw.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/,'$1-$2-$3-$4'):raw;
+  document.getElementById('a-cnum').textContent=fmt||'—';
+  document.getElementById('a-cown').textContent='به نام: '+(document.getElementById('a-owner').value||'—');
+  document.getElementById('a-cbk').textContent=document.getElementById('a-bank').value||'';
+}
+async function savePaySettings(){
+  const card=document.getElementById('a-card').value.trim();
+  const owner=document.getElementById('a-owner').value.trim();
+  const bank=document.getElementById('a-bank').value.trim();
+  const active=document.getElementById('pay-sbadge').classList.contains('pson');
+  const r=await api('admin_pay_settings',{card,owner,bank,active});
+  if(r.ok)showNb('pay-nb');else alert(r.msg);
+}
+async function togglePayActive(){
+  const b=document.getElementById('pay-sbadge');
+  const active=b.classList.contains('pson');
+  const card=document.getElementById('a-card').value.trim();
+  const owner=document.getElementById('a-owner').value.trim();
+  const bank=document.getElementById('a-bank').value.trim();
+  const r=await api('admin_pay_settings',{card,owner,bank,active:!active});
+  if(r.ok){b.textContent=!active?'✓ فعال':'✕ غیرفعال';b.className='psbadge '+(!active?'pson':'psoff');}
+}
+// ADMINS
+async function loadAdminList(){
+  const r=await api('admin_users',{q:''});if(!r.ok)return;
+  const lvl={support:'پشتیبانی',moderator:'مادراتور',superadmin:'سوپر ادمین'};
+  const admins=r.data.filter(u=>u.isAdmin);
+  document.getElementById('adm-list').innerHTML=admins.length?admins.map((u,i)=>`<tr><td>${i+1}</td><td><strong>${u.u}</strong></td><td style="color:var(--mu);font-size:.73rem">${u.email}</td><td><span class="tg r">${lvl[u.lvl]||'ادمین'}</span></td><td>${u.id===1?'<span style="color:var(--mu);font-size:.71rem">پیش‌فرض</span>':`<button class="ab2 d" onclick="removeAdmin(${u.id})">حذف دسترسی</button>`}</td></tr>`).join(''):'';
+}
+async function addAdmin(){
+  const fn=document.getElementById('na-fn').value.trim(),ln=document.getElementById('na-ln').value.trim();
+  const u=document.getElementById('na-u').value.trim(),e=document.getElementById('na-e').value.trim();
+  const p=document.getElementById('na-p').value,lv=document.getElementById('na-lv').value;
+  const r=await api('admin_add_admin',{fn,ln,u,email:e,pw:p,lv});
+  if(r.ok){['na-fn','na-ln','na-u','na-e','na-p'].forEach(id=>document.getElementById(id).value='');showNb('adm-nb');loadAdminList();loadAdminUsers();}
+  else showErr('adm-err',r.msg);
+}
+async function removeAdmin(uid){
+  if(!confirm('دسترسی ادمین حذف شود؟'))return;
+  const r=await api('admin_remove_admin',{uid});
+  if(r.ok){loadAdminList();loadAdminUsers();}else alert(r.msg);
+}
+
+// ══════════ MODALS ══════════
+function openM(type){
+  document.getElementById('ov-auth').classList.add('open');
+  document.getElementById('m-login').style.display=type==='login'?'block':'none';
+  document.getElementById('m-reg').style.display=type==='register'?'block':'none';
+  document.getElementById('lerr').classList.remove('show');
+  document.getElementById('rerr').classList.remove('show');
+}
+function closeOv(id,e){if(e.target===document.getElementById(id))closeAll();}
+function closeAll(){['ov-auth','ov-pay','ov-tkt'].forEach(id=>document.getElementById(id).classList.remove('open'));}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll();});
+
+// ══════════ HELPERS ══════════
+function copyIP(){navigator.clipboard.writeText('9mc.ir').then(()=>alert('کپی شد: 9mc.ir')).catch(()=>alert('9mc.ir'));}
+function toFa(n){return n.toString().replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);}
+function showErr(id,msg){const el=document.getElementById(id);el.textContent=msg;el.classList.add('show');}
+function showNb(id){const el=document.getElementById(id);if(!el)return;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),3000);}
+function setBtnLoading(id,on){const el=document.getElementById(id);if(!el)return;if(on){el.dataset.orig=el.textContent;el.innerHTML=el.dataset.orig+'<span class="loader"></span>';el.disabled=true;}else{el.innerHTML=el.dataset.orig||el.textContent;el.disabled=false;}}
+</script>
+</body>
+</html>
